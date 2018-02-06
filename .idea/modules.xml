@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/config-client01/config-client01.iml" filepath="$PROJECT_DIR$/config-client01/config-client01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-client02/config-client02.iml" filepath="$PROJECT_DIR$/config-client02/config-client02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server01/config-server01.iml" filepath="$PROJECT_DIR$/config-server01/config-server01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka01/eureka01.iml" filepath="$PROJECT_DIR$/eureka01/eureka01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mycloud.iml" filepath="$PROJECT_DIR$/mycloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider-compute/provider-compute.iml" filepath="$PROJECT_DIR$/provider-compute/provider-compute.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider-compute02/provider-compute02.iml" filepath="$PROJECT_DIR$/provider-compute02/provider-compute02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-feign/user-feign.iml" filepath="$PROJECT_DIR$/user-feign/user-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-ribbon/user-ribbon.iml" filepath="$PROJECT_DIR$/user-ribbon/user-ribbon.iml" />
+    </modules>
+  </component>
+</project>
