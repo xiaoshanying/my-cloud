@@ -1,5 +1,7 @@
 package com.wmz.api;
 
+import com.wmz.common.model.ResultBean;
+import com.wmz.compute.request.ComputeAddReq;
 import com.wmz.service.ComputeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +21,12 @@ public class ConsumerController {
     private ComputeService computeService;
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String add() {
-        return computeService.add(1, 2);
+    public ResultBean<Integer> add(ComputeAddReq computeAddReq) {
+        try {
+            return computeService.add(computeAddReq);
+        } catch (Exception e) {
+            return new ResultBean<>(e);
+        }
     }
 
 }

@@ -1,13 +1,13 @@
 package com.wmz.api;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.wmz.common.enums.ResponseCodeEnum;
+import com.wmz.compute.request.ComputeAddReq;
+import com.wmz.compute.response.ComputeAddResp;
+import com.wmz.serviceimpl.ComputeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,20 +15,20 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author wmz
  */
+@RequestMapping("/service/compute")
 @RestController
 public class ComputeController {
 
-    private final Logger logger = LoggerFactory.getLogger(ComputeController.class);
-
     @Autowired
-    private DiscoveryClient client;
+    private ComputeService computeService;
 
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
-        ServiceInstance instance = client.getLocalServiceInstance();
-        Integer r = a + b;
-        logger.info("/add,host:" + instance.getHost() + ",service_id:" + instance.getServiceId() + ",result is:" + r);
-        return r;
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public ComputeAddResp add(@RequestBody ComputeAddReq computeAddReq) {
+        try {
+            return computeService.add(computeAddReq);
+        } catch (Exception e) {
+            return new ComputeAddResp(ResponseCodeEnum.FAIL.getType(), e.toString());
+        }
     }
 
 

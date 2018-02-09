@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/compute-service/compute-service.iml" filepath="$PROJECT_DIR$/compute-service/compute-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-client01/config-client01.iml" filepath="$PROJECT_DIR$/config-client01/config-client01.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-client02/config-client02.iml" filepath="$PROJECT_DIR$/config-client02/config-client02.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server01/config-server01.iml" filepath="$PROJECT_DIR$/config-server01/config-server01.iml" />

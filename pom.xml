@@ -22,6 +22,8 @@
         <module>gateway</module>
         <module>config-client01</module>
         <module>config-client02</module>
+        <module>common</module>
+        <module>compute-service</module>
     </modules>
 
     <parent>
